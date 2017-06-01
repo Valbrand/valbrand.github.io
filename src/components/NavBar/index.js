@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { proportions, spaces } from '../../styles'
 
-const SideBar = () => (
+const NavBar = () => (
   <Root>
     <Greetings>
       <h1>
@@ -44,4 +44,4 @@ const Greetings = styled.div`
   margin-bottom: ${spaces.largest};
 `
 
-export default SideBar
+export default NavBar

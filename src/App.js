@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { proportions } from './styles'
-import SideBar from './components/SideBar'
+import NavBar from './components/NavBar'
 
 const App = () => (
   <div>
-    <SideBar />
+    <NavBar />
 
     <Content>
       <Section>
