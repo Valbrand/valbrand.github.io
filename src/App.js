@@ -2,22 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { proportions } from './styles'
+import sectionsData from './data/sections.json'
+
 import NavBar from './components/NavBar'
+import sections from './components/Sections'
 
 const App = () => (
   <div>
-    <NavBar />
+    <NavBar links={sectionsData} />
 
     <Content>
-      <Section>
-        <h1>Secao1</h1>
-      </Section>
-      <Section>
-        <h1>Secao 2</h1>
-      </Section>
-      <Section>
-        <h1>Secao 3</h1>
-      </Section>
+      {sectionsData.map(({ anchor, component }) => {
+        const Section = sections[component]
+
+        return <Section key={anchor} />
+      })}
     </Content>
   </div>
 )
@@ -29,12 +28,6 @@ const Content = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-
-  background-color: cyan;
-`
-
-const Section = styled.div`
-  min-height: 100vh;
 `
 
 export default App

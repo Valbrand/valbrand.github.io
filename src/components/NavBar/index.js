@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 import { proportions, spaces } from '../../styles'
 
-const NavBar = () => (
+import LinkList from './LinkList'
+
+const NavBar = ({ links }) => (
   <Root>
     <Greetings>
       <h1>
@@ -14,14 +16,7 @@ const NavBar = () => (
       </h2>
     </Greetings>
 
-    <ul>
-      <li>
-        <a href="#about">About me</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-    </ul>
+    <LinkList links={links} />
   </Root>
 )
 
@@ -33,8 +28,6 @@ const Root = styled.div`
   left: 0;
   top: 0;
 
-  background-color: lightgray;
-
   text-align: right;
 
   padding: ${spaces.largest} ${spaces.regular};
@@ -42,6 +35,10 @@ const Root = styled.div`
 
 const Greetings = styled.div`
   margin-bottom: ${spaces.largest};
+
+  h1 {
+    margin-bottom: ${spaces.smallest};
+  }
 `
 
 export default NavBar

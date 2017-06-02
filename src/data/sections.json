@@ -1,0 +1,17 @@
+[
+  {
+    "anchor": "#about",
+    "label": "About me",
+    "component": "AboutSection"
+  },
+  {
+    "anchor": "#projects",
+    "label": "What I've done",
+    "component": "ProjectsSection"
+  },
+  {
+    "anchor": "#contact",
+    "label": "How to reach me",
+    "component": "ContactSection"
+  }
+]
