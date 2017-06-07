@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { proportions } from './styles'
+import { proportions, spaces } from './styles'
 import sectionsData from './data/sections.json'
 
 import NavBar from './components/NavBar'
@@ -28,6 +28,8 @@ const Content = styled.div`
   position: absolute;
   right: 0;
   top: 0;
+
+  padding-top: ${spaces.largest}
 `
 
 export default App

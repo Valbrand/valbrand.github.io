@@ -1,16 +1,16 @@
 [
   {
-    "anchor": "#about",
+    "anchor": "about",
     "label": "About me",
     "component": "AboutSection"
   },
   {
-    "anchor": "#projects",
+    "anchor": "projects",
     "label": "What I've done",
     "component": "ProjectsSection"
   },
   {
-    "anchor": "#contact",
+    "anchor": "contact",
     "label": "How to reach me",
     "component": "ContactSection"
   }
