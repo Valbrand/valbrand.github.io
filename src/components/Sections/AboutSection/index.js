@@ -6,14 +6,14 @@ import FullWidthImage from '../../FullWidthImage'
 import Paragraph from '../../Paragraph'
 
 const AboutSection = () => (
-  <Section title='About me'>
+  <Section title='Hello, this is Daniel'>
     <div>
       <Paragraph>
         I'm a web/mobile developer with a passion for Javascript.
         I also happen to love functional programming, cooking and brewing coffee.
       </Paragraph>
       <Paragraph>
-        Want to see the little things I'm proud of? Scroll down and check it out.
+        Every now and then, I take part in the creation of some cool stuff. Scroll down to check it out.
       </Paragraph>
     </div>
 

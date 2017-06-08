@@ -9,11 +9,8 @@ const NavBar = ({ links }) => (
   <Root>
     <Greetings>
       <h1>
-        Hello
+        dvalbrand.com
       </h1>
-      <h2>
-        I am Daniel.
-      </h2>
     </Greetings>
 
     <LinkList links={links} />
@@ -35,10 +32,6 @@ const Root = styled.div`
 
 const Greetings = styled.div`
   margin-bottom: ${spaces.largest};
-
-  h1 {
-    margin-bottom: ${spaces.smallest};
-  }
 `
 
 export default NavBar

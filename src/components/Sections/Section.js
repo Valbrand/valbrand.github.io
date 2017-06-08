@@ -6,9 +6,11 @@ import { spaces } from '../../styles'
 
 const Section = ({ title, children }) => (
   <Root>
-    <Title>
-      {title}
-    </Title>
+    {title == null ? null : (
+      <Title>
+        {title}
+      </Title>
+    )}
 
     <Content>
       {children}
