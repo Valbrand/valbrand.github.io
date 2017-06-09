@@ -12,23 +12,25 @@ class ProjectListItem extends Component {
   }
 
   render () {
-    const { name, description, link } = this.props
+    const { name, description, link, reversed } = this.props
     const { image } = this.state
 
     return (
       <Root>
-        <DescriptionContainer>
-          <h3>
-            <a href={link}>
-              {name}
-            </a>
-          </h3>
-          <p>{description}</p>
-        </DescriptionContainer>
+        <Content reversed={reversed}>
+          <DescriptionContainer>
+            <h3>
+              <a href={link}>
+                {name}
+              </a>
+            </h3>
+            <p>{description}</p>
+          </DescriptionContainer>
 
-        <AppIconContainer>
-          {image ? <AppIcon src={image} alt={`${name} icon`} /> : null}
-        </AppIconContainer>
+          <AppIconContainer>
+            {image ? <AppIcon src={image} alt={`${name} icon`} /> : null}
+          </AppIconContainer>
+        </Content>
       </Root>
     )
   }
@@ -47,18 +49,26 @@ ProjectListItem.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   link: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  reversed: PropTypes.bool
 }
 
+const listItemHeight = 20
+
 const Root = styled.li`
+  position: relative;
+
+  height: ${listItemHeight}rem;
+`
+
+const Content = styled.div`
+  position: absolute;
+
   display: flex;
   flex-flow: row nowrap;
+  flex-direction: ${({ reversed }) => reversed ? 'row-reverse' : 'row'};
   justify-content: space-between;
-  height: 20rem;
-
-  :nth-child(2n+1) {
-    flex-direction: row-reverse;
-  }
+  height: 100%;
 `
 
 const DescriptionContainer = styled.div`
@@ -67,11 +77,15 @@ const DescriptionContainer = styled.div`
 
 const AppIconContainer = styled.div`
   flex: 0 0 0;
+
+  height: 100%;
 `
 
 const AppIcon = styled.img`
   height: 100%;
   width: auto;
+
+  border-radius: ${listItemHeight * 0.175}rem;
 `
 
 export default ProjectListItem

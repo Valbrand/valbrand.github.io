@@ -8,9 +8,10 @@ import { spaces } from '../../../styles'
 
 const ProjectList = ({ projects }) => (
   <Root>
-    {projects.map((project) => (
+    {projects.map((project, index) => (
       <ProjectListItem
         key={project.name}
+        reversed={isOdd(index)}
         {...project}
       />
     ))}
@@ -26,5 +27,9 @@ const Root = styled.ul`
 
   ${withGutter(spaces.regular)}
 `
+
+function isOdd (n) {
+  return (n % 2) === 1
+}
 
 export default ProjectList
