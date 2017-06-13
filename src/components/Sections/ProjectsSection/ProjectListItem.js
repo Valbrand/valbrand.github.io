@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import { spaces } from '../../../styles'
+
 class ProjectListItem extends Component {
   constructor (...args) {
     super(...args)
@@ -18,7 +20,7 @@ class ProjectListItem extends Component {
     return (
       <Root>
         <Content reversed={reversed}>
-          <DescriptionContainer>
+          <DescriptionContainer reversed={reversed}>
             <h3>
               <a href={link}>
                 {name}
@@ -53,7 +55,7 @@ ProjectListItem.propTypes = {
   reversed: PropTypes.bool
 }
 
-const listItemHeight = 20
+const listItemHeight = 10
 
 const Root = styled.li`
   position: relative;
@@ -68,11 +70,15 @@ const Content = styled.div`
   flex-flow: row nowrap;
   flex-direction: ${({ reversed }) => reversed ? 'row-reverse' : 'row'};
   justify-content: space-between;
+  align-items: center;
   height: 100%;
 `
 
 const DescriptionContainer = styled.div`
   flex: 1 0 0;
+
+  padding-left: ${({ reversed }) => reversed ? spaces.large : 0};
+  padding-right: ${({ reversed }) => reversed ? 0 : spaces.large};
 `
 
 const AppIconContainer = styled.div`
