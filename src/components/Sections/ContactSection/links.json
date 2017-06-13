@@ -1,0 +1,23 @@
+[
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/valbrand",
+    "icon": "linkedin-square",
+    "color": "#0073b0"
+  },
+  {
+    "name": "e-mail",
+    "link": "mailto:daniel@dvalbrand.com",
+    "icon": "envelope-o"
+  },
+  {
+    "name": "Github",
+    "link": "https://www.github.com/valbrand",
+    "icon": "github"
+  },
+  {
+    "name": "Medium",
+    "link": "https://www.medium.com/@Valbrand",
+    "icon": "medium"
+  }
+]
