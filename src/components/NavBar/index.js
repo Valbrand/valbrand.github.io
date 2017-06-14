@@ -32,6 +32,11 @@ const Root = styled.div`
 
 const Greetings = styled.div`
   margin-bottom: ${spaces.largest};
+
+  & > h1 {
+    font-size: initial;
+    font-size: 2.5vw;
+  }
 `
 
 export default NavBar

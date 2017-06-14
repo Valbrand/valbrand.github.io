@@ -24,6 +24,11 @@ Section.propTypes = {
 
 const Root = styled.div`
   padding-bottom: ${spaces.largest};
+  min-height: 100vh;
+
+  &:last-child {
+    min-height: 0;
+  }
 `
 
 const Title = styled.h1`

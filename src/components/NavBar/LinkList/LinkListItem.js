@@ -11,7 +11,7 @@ const Root = styled.a`
   text-decoration: none;
   text-transform: uppercase;
 
-  font-weight: ${({ active }) => active ? 'bold' : 'normal'}
+  font-weight: ${({ active }) => active ? 'bold' : 'normal'};
 `
 
 export default LinkListItem
