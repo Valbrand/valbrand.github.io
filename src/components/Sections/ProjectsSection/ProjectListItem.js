@@ -32,6 +32,7 @@ class ProjectListItem extends Component {
                 return (
                   <CallToAction
                     href={links[linkType]}
+                    target='_blank'
                     key={linkType}
                   >
                     {sanitizedCTAs[linkType]}
