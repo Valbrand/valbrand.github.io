@@ -25,7 +25,7 @@ ProjectList.propTypes = {
 const Root = styled.ul`
   list-style-type: none;
 
-  ${withGutter(spaces.regular)}
+  ${withGutter(spaces.large)}
 `
 
 function isOdd (n) {
