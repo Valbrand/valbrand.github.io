@@ -20,3 +20,9 @@ a {
 a:visited {
   color: #420099;
 }
+
+@media screen and (max-device-width: 768px) {
+  html {
+    font-size: 0.8rem;
+  }
+}

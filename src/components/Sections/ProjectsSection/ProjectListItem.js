@@ -29,7 +29,10 @@ class ProjectListItem extends Component {
 
               {Object.keys(links).map((linkType) => {
                 return (
-                  <CallToAction href={links[linkType]}>
+                  <CallToAction
+                    href={links[linkType]}
+                    key={linkType}
+                  >
                     {sanitizedCTAs[linkType]}
                   </CallToAction>
                 )

@@ -29,6 +29,8 @@ const Root = styled.section`
 const Title = styled.h1`
   flex: 0 0 auto;
 
+  font-size: 2rem;
+
   padding-left: ${spaces.large};
   padding-bottom: ${spaces.large};
 `
