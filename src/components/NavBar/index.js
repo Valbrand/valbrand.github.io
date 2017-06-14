@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { proportions, spaces } from '../../styles'
+import media from '../../styles/helpers/media'
 
 import LinkList from './LinkList'
 
@@ -28,6 +29,13 @@ const Root = styled.aside`
   text-align: right;
 
   padding: ${spaces.largest} ${spaces.regular};
+
+  ${media.navbar`
+    width: 100%;
+    bottom: 0;
+  `}
+
+  background: cyan;
 `
 
 const Greetings = styled.div`

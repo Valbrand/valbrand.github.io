@@ -5,6 +5,10 @@
   color: #433050;
 }
 
+body {
+  background-color: #f7f7f8;
+}
+
 html {
   font-family: 'Droid Sans Mono', monospace;
 }
@@ -21,7 +25,7 @@ a:visited {
   color: #420099;
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 0.8rem;
   }
