@@ -6,8 +6,8 @@ import links from './links.json'
 import Icon from './Icon'
 import { spaces } from '../../../styles'
 
-const ContactSection = () => (
-  <Section title='Contact'>
+const ContactSection = ({ anchor }) => (
+  <Section title='Contact' id={anchor}>
     <Content>
       <LinkList>
         {links.map((link) => (

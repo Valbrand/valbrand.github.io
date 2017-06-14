@@ -34,8 +34,6 @@ const Root = styled.aside`
     width: 100%;
     bottom: 0;
   `}
-
-  background: cyan;
 `
 
 const Greetings = styled.div`

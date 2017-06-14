@@ -17,7 +17,7 @@ const App = () => (
         {sectionsData.map(({ anchor, component }) => {
           const Section = sections[component]
 
-          return <Section key={anchor} />
+          return <Section key={anchor} anchor={anchor} />
         })}
       </main>
 

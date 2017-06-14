@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 import { spaces } from '../../styles'
 
-const Section = ({ title, children }) => (
-  <Root>
+const Section = ({ title, children, id }) => (
+  <Root id={id}>
     {title == null ? null : (
       <Title>
         {title}

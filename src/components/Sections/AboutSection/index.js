@@ -5,8 +5,8 @@ import Section from '../Section'
 import FullWidthImage from '../../FullWidthImage'
 import Paragraph from '../../Paragraph'
 
-const AboutSection = () => (
-  <Section title='Hello, this is Daniel'>
+const AboutSection = ({ anchor }) => (
+  <Section title='Hello, this is Daniel' id={anchor}>
     <div>
       <Paragraph>
         I'm a web/mobile developer with a passion for Javascript.
