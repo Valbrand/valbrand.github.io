@@ -4,25 +4,23 @@ import styled from 'styled-components'
 const Icon = ({ link }) => {
   const {
     icon,
-    link: url,
-    color
+    link: url
   } = link
 
   return (
     <Root
       href={url}
       target='_blank'
-      color={color}
     >
-      <IconElement className={`fa fa-${icon} fa-2x`} />
+      <IconElement
+        className={`fa fa-${icon} fa-2x`}
+      />
     </Root>
   )
 }
 
 const Root = styled.a`
   color: inherit;
-
-
 `
 
 const IconElement = styled.span`

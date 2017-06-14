@@ -6,17 +6,22 @@ import sectionsData from './data/sections.json'
 
 import NavBar from './components/NavBar'
 import sections from './components/Sections'
+import Footer from './components/Footer'
 
 const App = () => (
   <div>
     <NavBar links={sectionsData} />
 
     <Content>
-      {sectionsData.map(({ anchor, component }) => {
-        const Section = sections[component]
+      <div>
+        {sectionsData.map(({ anchor, component }) => {
+          const Section = sections[component]
 
-        return <Section key={anchor} />
-      })}
+          return <Section key={anchor} />
+        })}
+      </div>
+
+      <Footer />
     </Content>
   </div>
 )
