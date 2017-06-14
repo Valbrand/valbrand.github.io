@@ -2,6 +2,7 @@
   "name": "dvalbrand",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://valbrand.github.io",
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
