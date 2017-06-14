@@ -4,7 +4,8 @@
   "private": true,
   "homepage": "https://valbrand.github.io",
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "gh-pages": "^1.0.0",
+    "react-scripts": "^1.0.7"
   },
   "dependencies": {
     "react": "^15.5.4",
@@ -15,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b master"
   }
 }
