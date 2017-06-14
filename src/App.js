@@ -38,6 +38,8 @@ const Content = styled.div`
 
   ${media.navbar`
     width: 100%;
+
+    padding-bottom: 6.64rem; //correção da navbar
   `}
 `
 

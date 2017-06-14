@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { spaces, colors } from '../../../styles'
+import media from '../../../styles/helpers/media'
 import sanitizedCTAs from '../../../data/sanitizedCTAs.json'
 
 class ProjectListItem extends Component {
@@ -73,17 +74,28 @@ const Root = styled.li`
   position: relative;
 
   height: ${listItemHeight}rem;
+
+  ${media.portfolio`
+    height: auto;
+  `}
 `
 
 const Content = styled.div`
   position: absolute;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-wrap: nowrap;
   flex-direction: ${({ reversed }) => reversed ? 'row-reverse' : 'row'};
   justify-content: space-between;
   align-items: center;
+
   height: 100%;
+
+  ${media.portfolio`
+    position: static;
+
+    flex-direction: column-reverse;
+  `}
 `
 
 const DescriptionContainer = styled.div`
@@ -91,6 +103,10 @@ const DescriptionContainer = styled.div`
 
   padding-left: ${({ reversed }) => reversed ? spaces.large : 0};
   padding-right: ${({ reversed }) => reversed ? 0 : spaces.large};
+
+  ${media.portfolio`
+    padding: ${spaces.regular} 0 0 0;
+  `}
 `
 
 const DescriptionHeaderContainer = styled.div`
@@ -122,6 +138,10 @@ const AppIconContainer = styled.div`
   flex: 0 0 0;
 
   height: 100%;
+
+  ${media.portfolio`
+    height: auto;
+  `}
 `
 
 const AppIcon = styled.img`
@@ -129,6 +149,11 @@ const AppIcon = styled.img`
   width: auto;
 
   border-radius: ${listItemHeight * 0.175}rem;
+
+  ${media.portfolio`
+    width: 100%;
+    height: auto;
+  `}
 `
 
 export default ProjectListItem

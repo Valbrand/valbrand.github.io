@@ -4,6 +4,7 @@ import { spaces } from '../styles'
 const Paragraph = styled.p`
   padding-bottom: ${spaces.regular};
   padding-left: ${spaces.large};
+  padding-right: ${spaces.large};
   text-indent: ${spaces.large};
 
   :last-child {

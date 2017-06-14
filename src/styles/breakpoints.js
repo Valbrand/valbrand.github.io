@@ -1,3 +1,4 @@
 export default {
-  navbar: 550
+  navbar: 550,
+  portfolio: 675
 }
