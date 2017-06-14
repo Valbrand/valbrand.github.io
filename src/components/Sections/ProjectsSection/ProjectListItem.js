@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { spaces } from '../../../styles'
+import { spaces, colors } from '../../../styles'
+import sanitizedCTAs from '../../../data/sanitizedCTAs.json'
 
 class ProjectListItem extends Component {
   constructor (...args) {
@@ -14,18 +15,26 @@ class ProjectListItem extends Component {
   }
 
   render () {
-    const { name, description, link, reversed } = this.props
+    const { name, description, links, reversed } = this.props
     const { image } = this.state
 
     return (
       <Root>
         <Content reversed={reversed}>
           <DescriptionContainer reversed={reversed}>
-            <h3>
-              <a href={link}>
+            <DescriptionHeaderContainer>
+              <DescriptionHeader>
                 {name}
-              </a>
-            </h3>
+              </DescriptionHeader>
+
+              {Object.keys(links).map((linkType) => {
+                return (
+                  <CallToAction href={links[linkType]}>
+                    {sanitizedCTAs[linkType]}
+                  </CallToAction>
+                )
+              })}
+            </DescriptionHeaderContainer>
             <p>{description}</p>
           </DescriptionContainer>
 
@@ -79,6 +88,31 @@ const DescriptionContainer = styled.div`
 
   padding-left: ${({ reversed }) => reversed ? spaces.large : 0};
   padding-right: ${({ reversed }) => reversed ? 0 : spaces.large};
+`
+
+const DescriptionHeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const DescriptionHeader = styled.h3`
+  margin-right: ${spaces.small};
+`
+
+const CallToAction = styled.a`
+  color: white;
+  background-color: ${colors.link};
+
+  text-decoration: none;
+  font-size: 0.6rem;
+
+  padding: ${spaces.smallest} ${spaces.small};
+  border-radius: ${spaces.small};
+
+  &:visited {
+    color: white;
+    background-color: ${colors.visitedLink};
+  }
 `
 
 const AppIconContainer = styled.div`

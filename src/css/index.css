@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #433050;
 }
 
 html {
@@ -10,4 +11,12 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: #6e00ff;
+}
+
+a:visited {
+  color: #420099;
 }
