@@ -22,7 +22,7 @@ Section.propTypes = {
   title: PropTypes.string.isRequired
 }
 
-const Root = styled.div`
+const Root = styled.section`
   padding-bottom: ${spaces.largest};
 `
 

@@ -13,13 +13,13 @@ const App = () => (
     <NavBar links={sectionsData} />
 
     <Content>
-      <div>
+      <main>
         {sectionsData.map(({ anchor, component }) => {
           const Section = sections[component]
 
           return <Section key={anchor} />
         })}
-      </div>
+      </main>
 
       <Footer />
     </Content>

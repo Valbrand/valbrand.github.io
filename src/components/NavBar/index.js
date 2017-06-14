@@ -17,7 +17,7 @@ const NavBar = ({ links }) => (
   </Root>
 )
 
-const Root = styled.div`
+const Root = styled.aside`
   width: ${proportions.sidebarProportionalWidth}%;
   height: 100%;
 
