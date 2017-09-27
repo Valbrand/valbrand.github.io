@@ -5,6 +5,11 @@
     "component": "AboutSection"
   },
   {
+    "anchor": "articles",
+    "label": "What I've written",
+    "component": "ArticlesSection"
+  },
+  {
     "anchor": "projects",
     "label": "What I've done",
     "component": "ProjectsSection"

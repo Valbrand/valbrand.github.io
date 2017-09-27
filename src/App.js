@@ -17,6 +17,8 @@ const App = () => (
         {sectionsData.map(({ anchor, component }) => {
           const Section = sections[component]
 
+          console.log(sections, component, anchor, Section)
+
           return <Section key={anchor} anchor={anchor} />
         })}
       </main>
